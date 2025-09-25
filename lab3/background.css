@@ -1,0 +1,12 @@
+
+.container {
+  position:relative;
+}
+
+.texto {
+  position:absolute;
+  color: white;
+  font-weight: bold;
+  top: 10px;
+  left: 10px;
+}
