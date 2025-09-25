@@ -1,0 +1,64 @@
+/* Corrigido: adicionar seletor global * para reset */
+* {
+  padding: 0;
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* Corrigido para alinhar verticalmente */
+  gap: 10px;
+  padding: 10px;
+  background: whitesmoke;
+}
+
+nav {
+  display: flex;
+  gap: 10px;
+}
+
+nav a {
+  padding: 10px 20px;
+  background-color: white;
+  text-decoration: none;
+  color: black;
+  border-radius: 5px;
+  box-shadow: 2px 3px 3px lightgrey;
+}
+
+nav a:last-child {
+  background: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+}
+
+a:hover {
+  filter: brightness(90%);
+}
+
+h1 {
+  margin: 0; /* Corrigido para evitar espaçamento extra */
+}
+
+.hamburguer {
+  display: none;
+}
+
+@media (max-width: 600px) {
+  header, nav {
+    flex-direction: column;
+  }
+
+  nav {
+    display: none;
+  }
+
+  header:hover nav {
+    display: flex;
+  }
+
+  .hamburguer {
+    display: block;
+  }
+}
