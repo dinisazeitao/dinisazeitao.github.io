@@ -1,68 +1,145 @@
  <!DOCTYPE html>
 <html lang="pt">
-    <head>
-        <meta charset="UTF-8">
-        <title>Cidade</title>
-    </head>
-    <body>
-        <header>
-            <h1>Setúbal:</h1>
-        </header>
-        <main>
-            <h2>Informações</h2>
-            
-            <style>
-table, th, td {
-  border:1px solid black;
-}
-</style>
+<head>
+    <meta charset="UTF-8">
+    <title>Cidade</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header, footer {
+            background-color: #000000;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+        }
+
+        main {
+            display: grid;
+            grid-template-columns: 1fr 1fr; /* duas colunas */
+            grid-template-rows: auto auto; /* linhas automáticas */
+            grid-template-areas: 
+                "info curiosidades"
+                "tabela curiosidades";
+            gap: 20px;
+            padding: 20px;
+        }
+
+        h2 {
+            margin-top: 0;
+            color: #000000;
+        }
+
+        .info {
+            grid-area: info;
+            background: #f0f8ff;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .tabela {
+            grid-area: tabela;
+            background: #f9f9f9;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            border: 1px solid #000000;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #cce0ff;
+        }
+
+        .curiosidades {
+            grid-area: curiosidades;
+            background: #fff8e1;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .curiosidades p {
+            margin: 8px 0;
+        }
+
+        footer {
+            margin-top: 20px;
+        }
+    </style>
+</head>
 <body>
-<table style="width:50%">
-  <tr>
-    <th rowspan="2">Demografia</th>
-    <td>População</td>
-    <td>90.396 Hab</td>
-  </tr>
-  <tr>
-    <td>Densidade Populacional</td>
-    <td>536,99 Hab/Km²</td>
-  </tr>
-  <th rowspan="3">Geografia</th>
-    <td>Área</td>
-    <td>230,3 km²</td>
-  </tr>
-  <tr>
-    <td>Região</td>
-    <td>Setúbal</td>
-  </tr>
-  <tr>
-    <td>País</td>
-    <td>Portugal</td>
-  </tr>
-    <th>Website</th>
-    <td> <a href="https://www.mun-setubal.pt" target="_blank" >
-      https://www.mun-setubal.pt
-    </a> </td>
-  </tr>
-</table>
+    <header>
+        <h1>Setúbal</h1>
+    </header>
+
+    <main>
+        <section class="info">
+            <h2>Informações</h2>
+            <p>Setúbal é uma cidade portuguesa localizada na região de Lisboa, conhecida pela sua gastronomia, praias e património histórico.</p>
+        </section>
+
+        <section class="tabela">
+            <h2>Dados Principais</h2>
+            <table>
+                <tr>
+                    <th rowspan="2">Demografia</th>
+                    <td>População</td>
+                    <td>90.396 Hab</td>
+                </tr>
+                <tr>
+                    <td>Densidade Populacional</td>
+                    <td>536,99 Hab/Km²</td>
+                </tr>
+                <tr>
+                    <th rowspan="3">Geografia</th>
+                    <td>Área</td>
+                    <td>230,3 km²</td>
+                </tr>
+                <tr>
+                    <td>Região</td>
+                    <td>Setúbal</td>
+                </tr>
+                <tr>
+                    <td>País</td>
+                    <td>Portugal</td>
+                </tr>
+                <tr>
+                    <th>Website</th>
+                    <td colspan="2">
+                        <a href="https://www.mun-setubal.pt" target="_blank">
+                            https://www.mun-setubal.pt
+                        </a>
+                    </td>
+                </tr>
+            </table>
+        </section>
+
+        <section class="curiosidades">
+            <h2>5 curiosidades interessantes</h2>
+            <p>🦑 Terra do Choco Frito – prato típico famoso em Portugal.</p>
+            <p>🌿 Serra da Arrábida – paisagem natural com praias paradisíacas.</p>
+            <p>🐬 Golfinhos do Sado – comunidade residente de golfinhos roazes.</p>
+            <p>🏰 Castelo de São Filipe – fortificação com vista panorâmica.</p>
+            <p>⚽ José Mourinho – treinador de futebol nascido em Setúbal.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>DIW 2025</p>
+    </footer>
 </body>
-<p> 5 curiosidades interessantes sobre Setúbal: </p>
-
-<p>Terra do Choco Frito 🦑 – Setúbal é famosa pelo prato típico choco frito, que atrai visitantes de todo o país para provar esta iguaria.</p>
-
-<p>Serra da Arrábida 🌿 – A Serra da Arrábida, vizinha de Setúbal, tem uma das paisagens naturais mais bonitas de Portugal, com praias paradisíacas como Galápos, Galapinhos e Figueirinha.</p>
-
-<p>Golfinhos do Sado 🐬 – É um dos poucos lugares na Europa onde existe uma comunidade residente de golfinhos roazes (bottlenose dolphins), que podem ser avistados no estuário do Sado.</p>
-
-<p>Castelo de São Filipe 🏰 – Construído no século XVI, oferece uma vista panorâmica incrível sobre a cidade, o rio Sado e a península de Tróia.</p>
-
-<p>José Mourinho ⚽ – O famoso treinador de futebol nasceu em Setúbal e até hoje mantém ligação com a cidade, onde existe até um museu dedicado à sua carreira.</p>
-   
-</p>
-</html>
-        </main>
-        <footer>
-            <p>DIW 2025</p>
-        </footer>
-    </body>
 </html>

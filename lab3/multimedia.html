@@ -1,58 +1,132 @@
-  <!DOCTYPE html>
+   <!DOCTYPE html>
 <html lang="pt">
-    <head> 
-        <style> 
+<head> 
+    <meta charset="UTF-8">
+    <title>Cidade</title>
+    <style> 
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        header, footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #000000;
+            color: white;
+        }
+
+        nav {
+            margin: 20px 0;
+        }
+
+        nav a {
+            margin: 0 10px;
+            text-decoration: none;
+            color: #0077cc;
+            font-weight: bold;
+        }
+
+        section {
+            min-height: 100vh; /* ocupa toda a altura do ecrã */
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* cores de fundo diferentes */
+        #video {
+            background-color: #f2f2f2;
+        }
+
+        #fotografias {
+            background-color: #e0f7fa;
+        }
+
+        #poema {
+            background-color: #fff3e0;
+        }
+
+        /* vídeo responsivo */
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%; /* proporção 16:9 */
+            height: 0;
+            width: 80%;
+            max-width: 800px;
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        /* galeria de fotografias */
         .fotografias {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 10px;
-}
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            justify-content: center;
+        }
 
-.fotografias img {
-    width: 250px;
-    border-radius: 40px;
-}
-        </style>
-        <meta charset="UTF-8">
-        <title>Cidade</title>
-        <link rel="stylesheet" href="titulos.css">
-        <link rel="stylesheet" href="background.css">
-    </head>
-    <body>
-        <header>
-            <h1>Setúbal:</h1>
-            <nav>
-             <a href="#fotografias">Fotografias</a>
-               <a href="#video">Vídeo</a>
-               <a href="#poema">Poema</a>   
-            </nav>
-        </header>
-        <main>
-  
-</div>
-            <h2>Multimedia</h2>
-            <p> Nesta página encontra ficheiros multimédia </p>
-            <p></p>
-            <p></p>
+        .fotografias img {
+            width: 250px;
+            max-width: 100%;
+            border-radius: 20px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
 
-            <section> 
-                 <h3 id="video">Video</h3>
-                <iframe width="460" height="215" src="https://www.youtube.com/embed/-z5guT86rKY?si=o4zCgE258rIgWYVm" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            </section>
-            <section>
-               <h3 id="fotografias">Fotografias</h3>
-               <div class="fotografias">
-                <img src="images/bocage.png" alt="Setubal1">
-                <img src="images/porto.png" alt="Setubal2">
-                <img src="images/praia.png" alt="Setubal4">
-                <img src="images/camera.png" alt="Setubal5">
-                <img src="images/forte.png" alt="Setubal6">
-                <img src="images/Setubal_III__28cropped_29.png" alt="Setubal3">
-             </div>
-          </section>
-          <section>
-           <h3 id="poema">Poema</h3> 
+        /* poema centralizado */
+        #poema div {
+            max-width: 600px;
+            font-style: italic;
+            line-height: 1.6;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Setúbal</h1>
+    </header>
+
+    <main>
+        <nav>
+            <a href="#fotografias">Fotografias</a>
+            <a href="#video">Vídeo</a>
+            <a href="#poema">Poema</a>
+        </nav>
+
+        <section id="video"> 
+            <h2>Vídeo</h2>
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/-z5guT86rKY?si=o4zCgE258rIgWYVm" 
+                        title="YouTube video player" 
+                        allowfullscreen>
+                </iframe>
+            </div>
+        </section>
+
+        <section id="fotografias">
+            <h2>Fotografias</h2>
+            <div class="fotografias">
+                <img src="images/bocage.png" alt="Estátua de Bocage em Setúbal">
+                <img src="images/porto.png" alt="Porto de Setúbal">
+                <img src="images/praia.png" alt="Praia de Setúbal">
+                <img src="images/camera.png" alt="Câmara Municipal de Setúbal">
+                <img src="images/forte.png" alt="Forte de Setúbal">
+                <img src="images/Setubal_III__28cropped_29.png" alt="Vista panorâmica de Setúbal">
+            </div>
+        </section>
+
+        <section id="poema">
+            <h2>Poema</h2> 
             <div>
                 <p>Magro, de olhos azuis, carão moreno, </p>
                 <p>Bem servido de pés, meão na altura,</p>
@@ -72,10 +146,11 @@
                 <p>Saíram dele mesmo estas verdades</p>
                 <p>um dia em que se achou mais pachorrento.</p>
             </div>
-          </section>
-        </main>
-        <footer>
-            <p>DIW 2025</p>
-        </footer>
-    </body>
+        </section>
+    </main>
+
+    <footer>
+        <p>DIW 2025</p>
+    </footer>
+</body>
 </html>
