@@ -8,44 +8,79 @@
 </head>
 <body>
 
-
-<main>
-   <div>
-    <p>Menu</p>
-  </div>
-<section>
-    <p>Hero Page</p>
-  </section>
-
-  <div>
-<section>
-    <p>Laboratorios:</p>
+  <!-- 🧭 MENU -->
+  <nav>
     <ul>
-        <li><a href="lab1/index.html">Lab1</a></li>
-        <li><a href="lab2/index.html">Lab2</a></li>
-        <li><a href="lab3/index.html">Lab3</a></li>
+      <li><a href="#inicio">Início</a></li>
+      <li><a href="#projetos">Projetos</a></li>
+      <li><a href="#cadeira">Interfaces Web</a></li>
     </ul>
-  </section>
-  </div>
+  </nav>
 
-<div>
-  <section>
-     <p>Eis a minha primeira página Web!</p>
-    <p>
-      Na Unidade Curricular de 
-      <a href="https://moodle.ensinolusofona.pt/course/view.php?id=11232">
-        Desenvolvimento de Interfaces Web
-      </a>
-      abordaremos as seguintes tecnologias Web &#127760;:
-    </p>
-  </section>
-</div>
+  <main>
 
-</main>
+    <!-- 🦸 HERO SECTION -->
+    <section id="inicio" class="hero">
+      <div class="hero-content">
+        <h1>Bem-vindo à Minha Primeira Página Web!</h1>
+        <p>Explora os projetos e aprende mais sobre Interfaces Web 🌐</p>
+        <a href="#projetos" class="cta-button">Ver Projetos</a>
+      </div>
+    </section>
 
-<footer>
-  <p>Universidade Lusófona © 2025</p>
-</footer>
+    <!-- 💻 SECÇÃO PROJETOS -->
+    <section id="projetos">
+      <h2>Projetos / Labs</h2>
+      <p>Alguns exercícios desenvolvidos ao longo da UC.</p>
+
+      <div class="projetos-container">
+        <div class="card">
+          <li><a href="lab1/index.html">Lab1</a></li>
+        </div>
+
+        <div class="card">
+          <li><a href="lab2/index.html">Lab2</a></li>
+        </div>
+
+        <div class="card">
+          <li><a href="lab3/index.html">Lab3</a></li>
+        </div>
+
+        <div class="card">
+          <li><a href="lab4/index.html">Lab4</a></li>
+        </div>
+      </div>
+    </section>
+
+    <!-- 🧠 SECÇÃO DISCIPLINA -->
+    <section id="cadeira">
+      <h2>Interfaces Web</h2>
+
+      <div class="cadeira-container">
+        <div class="texto-cadeira">
+          <p>
+            A disciplina de <strong>Interfaces Web</strong> aborda os princípios fundamentais
+            do desenvolvimento de páginas e aplicações web, com foco na estrutura, estilo e
+            interatividade. São explorados conceitos de HTML, CSS e JavaScript, bem como
+            práticas de design responsivo e usabilidade.
+          </p>
+          <p>
+            Ao longo do semestre, são realizados laboratórios práticos que permitem aplicar os
+            conhecimentos adquiridos em projetos reais, desenvolvendo competências essenciais
+            para o mundo do desenvolvimento web moderno.
+          </p>
+        </div>
+
+        
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ⚓ RODAPÉ -->
+  <footer>
+    <p>Universidade Lusófona © 2025</p>
+  </footer>
 
 </body>
 </html>

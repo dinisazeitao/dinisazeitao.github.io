@@ -1,72 +1,220 @@
 
-/* MENU e HERO centralizados */
-main > div:first-child,
-main > div:nth-child(2) {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 3em;
+/* ======== ESTILO GERAL ======== */
+body {
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #222;
+  background-color: #fffafc;
 }
 
-/* MENU */
-div:first-child {
-  height: 10vh;
+main {
+  display: flex;
+  flex-direction: column;
+}
+
+/* ======== MENU ======== */
+nav {
   background: black;
   color: white;
   position: sticky;
   top: 0;
+  z-index: 100;
+  padding: 10px 0;
 }
 
-/* HERO IMAGE */
-div:nth-child(2) {
-  height: 90vh;
-  background-image: url("https://images.unsplash.com/photo-1459213599465-03ab6a4d5931?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218MHx8fHx8fHx8MTY1MTAxNTA2MA&ixlib=rb-1.2.1&q=80&w=1080");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  background-attachment: fixed;
-}
-
-/* TERCEIRO DIV */
-div:nth-child(3) {
-  height: 9vh;
-  background: rgb(212, 196, 235);
-}
-
-/* HEADER (se existir) */
-header {
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px;
-  background: whitesmoke;
+  justify-content: center;
+  gap: 2rem;
 }
 
-/* PENÚLTIMO DIV */
-div:nth-last-child(2) {
-  height: 80vh;
-  background-image: url("https://source.unsplash.com/GB1JI9CLzHs");
+nav a {
+  text-decoration: none;
+  color: inherit;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #ffb3c6;
+}
+
+/* ======== HERO SECTION ======== */
+.hero {
+  height: 90vh;
+  background-image: url("https://www.reddit.com/media?url=https%3A%2F%2Fpreview.redd.it%2Fbd7vqr3p0ma31.png%3Fwidth%3D1080%26crop%3Dsmart%26auto%3Dwebp%26s%3Dd25595629f1d37023450678398455f840e26996b");
+  background-size: cover;
+  background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  background-position: center;
-  background-size: cover;
-  align-items: start;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  position: relative;
 }
 
-/* RODAPÉ */
-footer {
-  height: 10vh;
-  background: black;
-  color: white;
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 800px;
+  padding: 20px;
+}
+
+.hero h1 {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+}
+
+.cta-button {
+  background: #ffffff;
+  color: black;
+  text-decoration: none;
+  padding: 12px 25px;
+  border-radius: 25px;
+  font-weight: bold;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.cta-button:hover {
+  background: #ffe3e3;
+  transform: scale(1.05);
+}
+
+/* ======== SECÇÃO PROJETOS ======== */
+#projetos {
+  background: #ffe1d6;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+#projetos h2 {
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+
+#projetos p {
+  color: #ffffff;
+  margin-bottom: 40px;
+}
+
+.projetos-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.card {
+  background: rgb(0, 0, 0);
+  border-radius: 10px;
+  padding: 20px;
+  width: 250px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+}
+
+/* ======== SECÇÃO DISCIPLINA ======== */
+#cadeira {
+  background: linear-gradient(180deg, #ffe3d4, #ffd6cc);
+  padding: 80px 20px;
+  color: #222;
+}
+
+#cadeira h2 {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 2em;
+}
+
+.cadeira-container {
   display: flex;
   justify-content: center;
   align-items: center;
+  gap: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+  flex-wrap: wrap;
 }
 
-/* MOBILE FIX */
+.texto-cadeira {
+  flex: 1;
+  min-width: 280px;
+}
+
+.texto-cadeira p {
+  line-height: 1.6;
+  margin-bottom: 1em;
+  color: #000000;
+  text-align: justify;
+}
+
+.wordcloud {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 280px;
+}
+
+.wordcloud img {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* ======== FOOTER ======== */
+footer {
+  background: black;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  height: 10vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ======== RESPONSIVIDADE ======== */
 @media (max-width: 768px) {
-  div:nth-child(2),
-  div:nth-last-child(2) {
-    background-attachment: scroll;
+  .cadeira-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .wordcloud img {
+    max-width: 80%;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .hero h1 {
+    font-size: 1.8em;
   }
 }

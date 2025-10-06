@@ -1,0 +1,66 @@
+/* Estilo geral */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(to bottom, #e0f7fa, #ffffff);
+    color: #333;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+header, footer {
+    background-color: #00796b;
+    color: white;
+    padding: 20px;
+}
+
+main {
+    padding: 20px;
+}
+
+h1, h2 {
+    margin-bottom: 10px;
+}
+
+img {
+    width: 400px;
+    height: 250px;
+    border-radius: 10px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+}
+
+/* Efeitos de imagem */
+img:hover {
+    box-shadow: 0 0 20px #00796b;
+    transform: scale(1.05);
+}
+
+/* Botões */
+button {
+    margin: 10px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 8px;
+    background-color: #009688;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #004d40;
+}
+
+/* Mensagem dinâmica */
+#mensagem {
+    margin-top: 30px;
+    font-style: italic;
+    color: #00695c;
+}
+
+/* Rodapé */
+footer p {
+    font-size: 0.9em;
+}
