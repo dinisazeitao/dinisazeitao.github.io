@@ -1,61 +1,49 @@
 
-
-
-
-main > div {  
-  /* centrando o <p> dos divs */
+/* MENU e HERO centralizados */
+main > div:first-child,
+main > div:nth-child(2) {
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 3em;
 }
 
-/* div "menu" */
+/* MENU */
 div:first-child {
-  /* O menu está sticky e ocupa 10vh da altura do viewport */
-  height: 10vh; 
+  height: 10vh;
   background: black;
-  color: rgb(255, 255, 255);
+  color: white;
   position: sticky;
   top: 0;
 }
 
-/*  segundo div, "hero image" */
+/* HERO IMAGE */
 div:nth-child(2) {
-  /* como o menu ocupa 10vh, este tem 90vh para o vermo inteiro. */
   height: 90vh;
-  background-image: url("https://images.unsplash.com/photo-1459213599465-03ab6a4d5931?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218MHx8fHx8fHx8MTY1MTAxNTA2MA&ixlib=rb-1.2.1&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=1080");
+  background-image: url("https://images.unsplash.com/photo-1459213599465-03ab6a4d5931?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218MHx8fHx8fHx8MTY1MTAxNTA2MA&ixlib=rb-1.2.1&q=80&w=1080");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
 }
 
-/* terceiro div, "div seguinte" */
+/* TERCEIRO DIV */
 div:nth-child(3) {
-  /* definindo altura e cor */
   height: 9vh;
   background: rgb(212, 196, 235);
-  
-  header {
-display: flex;
-justify-content:     
-         space-between;
-align-items: center;
-
-padding: 10px;
-background: whitesmoke;
 }
 
-/* ... + CSS anterior */
-
-
-
+/* HEADER (se existir) */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background: whitesmoke;
 }
 
-/* penultimo div: background-attachment: fixed */
+/* PENÚLTIMO DIV */
 div:nth-last-child(2) {
-  /* como tem menu e rodapé visíveis (10vh cada), define-se como altura 80vh. */
   height: 80vh;
   background-image: url("https://source.unsplash.com/GB1JI9CLzHs");
   background-repeat: no-repeat;
@@ -65,10 +53,20 @@ div:nth-last-child(2) {
   align-items: start;
 }
 
-/* ultimo div */
-div:last-child {
-  /* definindo altura e cor */
+/* RODAPÉ */
+footer {
   height: 10vh;
   background: black;
   color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* MOBILE FIX */
+@media (max-width: 768px) {
+  div:nth-child(2),
+  div:nth-last-child(2) {
+    background-attachment: scroll;
+  }
 }
