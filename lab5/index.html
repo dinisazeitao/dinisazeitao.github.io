@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interações em HTML e JS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="secao">
+        <h2 id="textoHover">Passa por aqui!</h2>
+    </div>
+
+    <div class="secao">
+        <h2 id="textoCor">Pinta-me!</h2>
+        <button class="color" data-color="red">Vermelho</button>
+        <button class="color" data-color="green">Verde</button>
+        <button class="color" data-color="blue">Azul</button>
+    </div>
+
+
+    <div class="secao">
+        <label for="caixaColorida">Experimenta escrever...</label>
+        <input type="text" id="caixaColorida">
+    </div>
+
+    <div class="secao">
+        <label for="corPaginaSelect">Escolha a cor de fundo:</label>
+        <select id="corPaginaSelect" onchange="mudarCorPaginaSelect(this)">
+            <option value="white">White (Branco)</option>
+            <option value="red">Red (Vermelho)</option>
+            <option value="blue">Blue (Azul)</option>
+            <option value="lightgreen">Light Green (Verde Claro)</option>
+            <option value="lightblue">Light Blue (Azul Claro)</option>
+        </select>
+    </div>
+
+    <div class="secao">
+        <button id="botaoContador">Conta!</button>
+        <span id="contador">0</span>
+    </div>
+    
+    <div class="secao">
+        <form id="formularioNomeIdade" onsubmit="submeterFormulario(event)">
+            <input id="nomeInput" type="text" placeholder="Insira o seu nome" required>
+            <input id="idadeInput" type="number" placeholder="Idade" required min="0">
+            <input type="submit" value="Submit">
+        </form>
+        <p id="resultadoFormulario"></p>
+    </div>
+    
+    <div class="secao">
+        <h2>Contador Automático (Incrementa a cada 1s)</h2>
+        <span id="autoContadorDisplay">0</span>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
