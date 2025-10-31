@@ -1,0 +1,41 @@
+/* =================================================================
+   3. SECÇÃO DE PRODUTOS (Loja)
+   ================================================================= */
+/* ... (restante código da secção 3, mantido) ... */
+
+.produto-card {
+    /* ... (Estilos do card mantidos) ... */
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: var(--sombra-card);
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.2s ease;
+}
+
+.produto-card figure {
+    margin: 10px 0 15px;
+    /* NOVO: Define um contentor com altura máxima para manter o layout estável */
+    height: 200px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    border-radius: 5px;
+}
+
+.produto-card img {
+    width: auto; /* Permite que a largura se ajuste */
+    max-width: 100%; /* Garante que não ultrapassa a largura do card */
+    max-height: 100%; /* Garante que não ultrapassa a altura do figure */
+    
+    /* CORREÇÃO APLICADA AQUI: */
+    object-fit: contain; /* Ajusta a imagem inteira ao contentor, mantendo as proporções */
+    
+    border-radius: 5px;
+}
+
+/* ... (restante código da secção 3, mantido) ... */

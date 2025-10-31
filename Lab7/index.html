@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles.css">
+    <title>LOLja</title>
+</head>
+<body>
+    <header>
+        <h1>LOLja</h1>
+        <nav>
+            <ul>
+                <li><a href="#produtos">Produtos</a></li>
+                <li><a href="#cesto">Cesto</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="produtos">
+            <div id="filtro-container">
+                <h2>Produtos da LOLja</h2>
+                
+                <label for="pesquisa-nome">Pesquisar por Nome:</label>
+                <input type="text" id="pesquisa-nome" placeholder="Ex: Espada, Capuz, etc.">
+                
+                <label for="filtro-categoria">Filtrar por Categoria:</label>
+                <select id="filtro-categoria">
+                    <option value="todos">Todas as Categorias</option>
+                </select>
+
+                <label for="ordenar-produtos">Ordenar por Preço:</label>
+                <select id="ordenar-produtos">
+                    <option value="nenhum">Sem Ordenação</option>
+                    <option value="asc">Preço: Crescente</option>
+                    <option value="desc">Preço: Decrescente</option>
+                </select>
+
+            </div>
+            </section>
+        <section id="cesto"></section>
+    </main>
+<footer></footer>
+<script src="produtos.js"></script> 
+<script src="main.js"></script>
+</body> 
+</html>
