@@ -23,9 +23,6 @@ body {
   background-color: rgb(0, 0, 8);
 }
 
-/* =========================
-   CABEÇALHO
-   ========================= */
 
 header {
   grid-area: header;
@@ -78,10 +75,6 @@ nav a:hover {
   color: white;
 }
 
-/* =========================
-   CONTEÚDO
-   ========================= */
-
 main {
   grid-area: main;
 
@@ -102,15 +95,6 @@ main h2 {
   font-size: 28px;
   margin-bottom: 10px;
 }
-
-/* =========================
-   ÁREA DE LOCALIZAÇÃO
-   ========================= */
-
-/*
-   Este div organiza o texto e o mapa.
-   No PC ficam lado a lado.
-*/
 
 main .localizacao {
   width: 100%;
