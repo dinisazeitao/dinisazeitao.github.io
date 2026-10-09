@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <title>Passa por aqui!</title>
+</head>
+
+<body>
+
+    <h1 id="titulo"
+    onmouseover="this.innerHTML='Obrigado por passares!'"
+    onmouseout="this.innerHTML='Passa por Aqui!'">
+    Passa por Aqui!
+    </h1>
+
+    <button onclick="mudarCor('red')">Vermelho!</button>
+    <button onclick="mudarCor('blue')">Azul!</button>
+    <button onclick="mudarCor('yellow')">Amarelo!</button>
+
+    <p>
+        Muda a cor da pagina! (In english thank you very much.)
+        <input type="text" id="corFundo">
+    </p>
+
+    <h2 id="numero">0</h2>
+
+    <button onclick="contar()">Conta!</button>
+
+
+    <script>
+        function mudarCor(cor) {
+            document.getElementById("titulo").style.color = cor;
+        }
+
+        let contador = 0;
+
+        function contar() {
+            contador = contador + 1;
+            document.getElementById("numero").innerHTML = contador;
+        }
+
+        document.getElementById("corFundo").addEventListener("change", function() {
+            document.body.style.backgroundColor = this.value;
+        });
+    </script>
+
+</body>
+</html>
+</html>
