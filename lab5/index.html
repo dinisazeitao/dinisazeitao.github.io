@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="pt">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Eventos JavaScript</title>
+  </head>
+
+  <body style="background-color: lavender; font-size: 30px">
+    <header><h1>Lab 5</h1></header>
+    <main>
+      <p onmouseover="this.textContent = '1. Obrigado Por Passares!'">
+        1. Passa por aqui!
+      </p>
+
+      <p>
+        <span id="pintar" style="color: rgb(0, 0, 0)">
+          2. Escolhe a tua cor favorita!
+        </span>
+
+        <button class="color" data-color="darkblue">Dark Blue</button>
+        <button class="color" data-color="teal">Teal</button>
+        <button class="color" data-color="purple">Purple</button>
+      </p>
+
+      <p>
+        3. Experimenta escrever...
+        <input type="text" oninput="mudarCor(this)" />
+      </p>
+
+      <p>
+        4. Escolha uma cor em inglês:
+        <input type="text" id="cor" />
+        <button onclick="document.body.style.backgroundColor = cor.value">
+          submeter
+        </button>
+      </p>
+
+      <p>5. <button id="contar">Conta!</button></p>
+      <h2></h2>
+    </main>
+
+    <script>
+      // 3
+      function mudarCor(caixa) {
+        const cores = ["blue", "pink", "yellow", "green", "red"];
+        caixa.style.backgroundColor = cores[caixa.value.length % 4];
+      }
+
+      // 5
+      // declaração de variáveis
+      const node_h2 = document.querySelector("h2");
+      const node_button = document.querySelector("#contar");
+
+      if (localStorage.getItem("contagem") === null) {
+        localStorage.setItem("contagem", 0);
+      }
+
+      let contagem = Number(localStorage.getItem("contagem"));
+
+      const contar = () => {
+        contagem++;
+        localStorage.setItem("contagem", contagem);
+        node_h2.textContent = contagem;
+      };
+
+      node_button.addEventListener("click", contar);
+
+      node_h2.textContent = contagem;
+
+      //2
+
+      document.querySelectorAll("button.color").forEach((button) => {
+        button.addEventListener("click", () => {
+          document.querySelector("#pintar").style.color = button.dataset.color;
+        });
+      });
+    </script>
+  </body>
+</html>
