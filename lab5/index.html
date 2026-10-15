@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Eventos JavaScript</title>
+    <link rel="stylesheet" href="styles.css" />
   </head>
 
   <body style="background-color: lavender; font-size: 30px">
@@ -29,11 +30,14 @@
       </p>
 
       <p>
-        4. Escolha uma cor em inglês:
-        <input type="text" id="cor" />
-        <button onclick="document.body.style.backgroundColor = cor.value">
-          submeter
-        </button>
+        4. Escolhe uma cor:
+        <select onchange="document.body.style.backgroundColor = this.value">
+          <option value="red">Red</option>
+          <option value="Blue">Blue</option>
+          <option value="Green">Green</option>
+          <option value="pink">Pink</option>
+          <option value="yellow">Yellow</option>
+        </select>
       </p>
 
       <p>5. <button id="contar">Conta!</button></p>
